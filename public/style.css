@@ -13,6 +13,66 @@ body {
     color: #333;
 }
 
+/* Make the header fixed at the top */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Adjust background color if needed */
+    color: white;
+    z-index: 1000; /* Ensure the header is above other content */
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px; /* Adjust spacing between links */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Add space to the top of the body to prevent content from hiding behind the fixed header */
+body {
+    margin-top: 80px; /* Adjust based on the height of your header */
+}
+
+/* Styling for sections */
+section {
+    padding: 20px;
+}
+
+/* Hide scrollbar while allowing scroll */
+body {
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
